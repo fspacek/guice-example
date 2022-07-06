@@ -25,9 +25,9 @@ public class PeriodicWorker implements Runnable {
 
     @Override
     public void run() {
-        try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("select now()");
-             ResultSet rs = preparedStatement.executeQuery()) {
+        try (final var connection = dataSource.getConnection();
+             final var preparedStatement = connection.prepareStatement("select now()");
+             final var rs = preparedStatement.executeQuery()) {
             while (rs.next()) {
                 LOG.info("Current time is {}", rs.getTimestamp(1));
             }

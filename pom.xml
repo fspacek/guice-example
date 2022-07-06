@@ -7,32 +7,37 @@
     <groupId>eu.devs.guice</groupId>
     <artifactId>guice-playground</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <properties>
+        <slf4j.version>1.7.26</slf4j.version>
+        <guice.version>5.1.0</guice.version>
+        <hikaricp.version>5.0.1</hikaricp.version>
+        <h2.version>2.1.212</h2.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
-            <version>4.2.0</version>
+            <version>${guice.version}</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>2.7.8</version>
+            <version>${hikaricp.version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.196</version>
+            <version>${h2.version}</version>
         </dependency>
 
     </dependencies>
@@ -42,10 +47,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
-                <version>3.7.01</version>
+                <version>3.8.1</version>
             </plugin>
         </plugins>
     </build>
