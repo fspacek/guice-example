@@ -8,10 +8,13 @@
     <artifactId>guice-playground</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <slf4j.version>1.7.26</slf4j.version>
-        <guice.version>5.1.0</guice.version>
-        <hikaricp.version>5.0.1</hikaricp.version>
-        <h2.version>2.1.212</h2.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <slf4j.version>2.0.16</slf4j.version>
+        <guice.version>7.0.0</guice.version>
+        <hikaricp.version>6.2.1</hikaricp.version>
+        <h2.version>2.3.232</h2.version>
     </properties>
     <dependencies>
         <dependency>
@@ -46,11 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
-                <version>3.8.1</version>
+                <version>3.13.0</version>
             </plugin>
         </plugins>
     </build>
